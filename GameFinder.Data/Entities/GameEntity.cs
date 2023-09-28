@@ -10,7 +10,13 @@ namespace GameFinder.Data.Entities
     public class GameEntity
     {
         [Key]
-        public int Id { get; set; }
-        //review DB with Joe
+        public int GameId { get; set; }
+        [Required]
+        public string Title { get; set; }
+        public string? Publisher { get; set; }
+        public DateTime? YearPublished { get; set; }
+        public int? GameGenreId { get; set; }
+        public int? GameSystemId { get; set; }
     }
 }
+
